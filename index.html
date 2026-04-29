@@ -3,62 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> NOMBRE DE EQUIPO - Portada</title>
+    <title>Grupo 2D - Portada</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <header class="portada-header">
-        <h1 class="titulo-equipo"> NOMBRE DE EQUIPO</h1>
-        <p class="presentacion-equipo">Somos un equipo de desarrollo web comprometido con crear experiencias digitales innovadoras y funcionales.</p>
-    </header>
-
-    <nav class="navegacion">
-        <ul class="menu-navegacion">
-            <li><a href="index.html" class="enlace-nav activo">Inicio</a></li>
-            <li><a href="bitacora.html" class="enlace-nav">Bitácora</a></li>
-        </ul>
-    </nav>
-
-    <main class="contenido-principal">
-        <section class="seccion-integrantes">
-            <h2 class="subtitulo">Integrantes del Equipo</h2>
-            <div class="lista-integrantes">
-                <a href="integrante1.html" class="tarjeta-integrante">
-                    <span class="numero-integrante">1</span>
-                    <span class="nombre-integrante">Integrante 1</span>
-                </a>
-                <a href="integrante2.html" class="tarjeta-integrante">
-                    <span class="numero-integrante">2</span>
-                    <span class="nombre-integrante">Integrante 2</span>
-                </a>
-                <a href="integrante3.html" class="tarjeta-integrante">
-                    <span class="numero-integrante">3</span>
-                    <span class="nombre-integrante">Integrante 3</span>
-                </a>
-                <a href="integrante4.html" class="tarjeta-integrante">
-                    <span class="numero-integrante">4</span>
-                    <span class="nombre-integrante">Integrante 4</span>
-                </a>
-                <a href="integrante5.html" class="tarjeta-integrante">
-                    <span class="numero-integrante">5</span>
-                    <span class="nombre-integrante">Integrante 5</span>
-                </a>
-            </div>
-        </section>
-
-        <section class="seccion-interactividad">
-            <button id="boton-saludo" class="boton-interactivo">¡Dale clic para conocer más!</button>
-            <p id="mensaje-salida" class="mensaje-dinamico"></p>
-        </section>
-    </main>
-
-    <footer class="pie-pagina">
-        <p>&copy; 2026  NOMBRE DE EQUIPO - Todos los derechos reservados</p>
-    </footer>
-
-    <script src="js/main.js"></script>
+<body data-page="home">
+    <div id="app"></div>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

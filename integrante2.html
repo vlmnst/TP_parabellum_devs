@@ -3,74 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Integrante 2 - NOMBRE DE EQUIPO</title>
+    <title>Integrante 2 - Grupo 2D</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <header class="header-integrante">
-        <nav class="navegacion">
-            <ul class="menu-navegacion">
-                <li><a href="index.html" class="enlace-nav">Inicio</a></li>
-                <li><a href="bitacora.html" class="enlace-nav">Bitácora</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="contenido-principal">
-        <article class="tarjeta-presentacion">
-            <div class="tarjeta-header">
-                <img src="img/avatar2.png" alt="Foto de Integrante 2" class="foto-perfil" id="foto-integrante2">
-                <button id="cambiar-foto" class="boton-cambiar-foto">Cambiar estilo</button>
-            </div>
-            
-            <div class="tarjeta-contenido">
-                <h1 class="nombre-completo">Integrante 2</h1>
-                <p class="ubicacion"><strong>Ubicación:</strong> Ciudad de Residence</p>
-                <p class="edad"><strong>Edad:</strong> 20 años</p>
-                
-                <section class="seccion-habilidades">
-                    <h3 class="titulo-seccion">Habilidades</h3>
-                    <ul class="lista-elementos">
-                        <li>Habilidad 1</li>
-                        <li>Habilidad 2</li>
-                        <li>Habilidad 3</li>
-                        <li>Habilidad 4</li>
-                    </ul>
-                </section>
-
-                <section class="seccion-peliculas">
-                    <h3 class="titulo-seccion">Películas Favoritas</h3>
-                    <ul class="lista-elementos">
-                        <li>Película 1</li>
-                        <li>Película 2</li>
-                        <li>Película 3</li>
-                    </ul>
-                </section>
-
-                <section class="seccion-discos">
-                    <h3 class="titulo-seccion">Discos Favoritos</h3>
-                    <ul class="lista-elementos">
-                        <li>Disco 1</li>
-                        <li>Disco 2</li>
-                        <li>Disco 3</li>
-                    </ul>
-                </section>
-
-                <button id="mostrar-mas" class="boton-mostrar-mas">Ver más información</button>
-                <div id="info-extra" class="info-extra oculto">
-                    <p>Información adicional del integrante...</p>
-                </div>
-            </div>
-        </article>
-    </main>
-
-    <footer class="pie-pagina">
-        <p>&copy; 2026 NOMBRE DE EQUIPO - Todos los derechos reservados</p>
-    </footer>
-
-    <script src="js/integrante2.js"></script>
+<body data-page="member" data-member-id="2">
+    <div id="app"></div>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
