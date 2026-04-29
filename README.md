@@ -54,12 +54,6 @@ Este proyecto es un sitio web grupal desarrollado como trabajo práctico para pr
 
 ### Cómo Personalizar
 
-1.替换 `index.html` 中的 " NOMBRE DE EQUIPO" 为团队名称
-2.替换 各页面中的 "Integrante X" 为真实姓名
-3.替换 中的 "Ciudad de Residence" 为实际城市
-4.替换 年龄和其他信息
-5.在 `img/` 文件夹中添加头像图片
-
 ### Repositorio y Publicación
 
 - **GitHub**: Crear un repositorio y subir el proyecto
