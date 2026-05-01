@@ -35,7 +35,6 @@ window.APP_DATA = {
             photo: '../img/perfil_vale.png',
             photoClass: 'profile-photo-custom',
             accent: '#c4513b',
-            cardMeta: 'Desarrolladora Backend · AWS',
             heroCopy: 'Desarrolladora backend con experiencia en AWS serverless, bases de datos relacionales y no relacionales, enfocada en soluciones escalables e innovadoras.',
             headline: 'Programadora con enfoque en backend, apasionada por investigar y resolver problemas a través de procesos innovadores.',
             quickFacts: [
@@ -96,6 +95,8 @@ window.APP_DATA = {
                         }
                     ]
                 },
+                { type: 'list', title: 'Películas favoritas', items: ['El Diablo viste a la moda', 'El Club de la Pelea', 'Legalmente Rubia'] },
+                { type: 'list', title: 'Discos favoritos', items: ['LUX', 'Almendra', 'La vida era mas corta'] },
                 {
                     type: 'extra',
                     text: 'Estoy completamente comprometida con mi trabajo y me aseguro de brindar lo mejor de mí. Si buscás a alguien capaz de ofrecer soluciones innovadoras y de calidad, estaré encantada de trabajar junto a vos.'
