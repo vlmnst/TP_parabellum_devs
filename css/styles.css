@@ -368,6 +368,35 @@ img {
     background: var(--color-paper);
     color: var(--color-muted);
     font-weight: 500;
+    transition:
+        transform 180ms ease,
+        background 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        color 180ms ease;
+}
+
+.tag-list li:hover {
+    border-color: rgba(47, 122, 95, 0.34);
+    background: rgba(47, 122, 95, 0.1);
+    color: var(--color-primary-dark);
+    box-shadow: 0 10px 18px rgba(31, 37, 40, 0.09);
+    transform: translateY(-2px) scale(1.02);
+}
+
+.tag-list li:focus-visible {
+    outline: 2px solid rgba(47, 122, 95, 0.45);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tag-list li {
+        transition: none;
+    }
+
+    .tag-list li:hover {
+        transform: none;
+    }
 }
 
 .extra-info {

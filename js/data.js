@@ -17,15 +17,15 @@ window.APP_DATA = {
     members: [
         {
             id: '1',
-            name: 'Integrante 1',
-            location: 'Ciudad de residencia',
-            age: 20,
-            photo: '',
+            name: 'Nico',
+            location: 'Rio Hondo, Provincia de Santiago del Estero',
+            age: 31,
+            photo: '../img/foto_perfil_nico.jpg',
             accent: '#2f7a5f',
-            skills: ['HTML semántico', 'CSS responsive', 'JavaScript básico', 'Trabajo en equipo'],
-            movies: ['Película 1', 'Película 2', 'Película 3'],
-            albums: ['Disco 1', 'Disco 2', 'Disco 3'],
-            extra: 'Le interesa aprender creando proyectos concretos y mejorar la forma en que presenta información en la web.'
+            skills: ['HTML semántico', 'CSS responsive', 'JavaScript básico', 'React', 'MySql', 'Trabajo en equipo'],
+            movies: ['El señor de los anillos', 'Rocky IV', 'En busca de la felicidad'],
+            albums: ['Green River', 'Californication', 'Magos, espadas y rosas'],
+            extra: 'Le interesa aprender dia a dia, en distintos grupos de trabajo, creando proyectos concretos y mejorando la forma en que presenta información en la web.'
         },
         {
             id: '2',
@@ -85,11 +85,18 @@ window.APP_DATA = {
             changes: 'Se creó la portada, las páginas individuales y la sección de bitácora.'
         },
         {
-            date: '12 de abril de 2026',
+            date: '18 de abril de 2026',
             title: 'Interactividad inicial',
             decisions: 'Se agregaron botones para mostrar mensajes, cambiar el estilo de la foto y desplegar información extra.',
             challenges: 'Los scripts de cada integrante repetían la misma lógica.',
             changes: 'Se mantuvo la funcionalidad y se identificó la necesidad de centralizar componentes.'
+        },
+        {
+            date: '25 de abril de 2026',
+            title: 'Diseño responsivo',
+            decisions: 'Se agregaron propiedades para que la pagina pueda ser visualizada en los distintos dispositivos.',
+            challenges: 'Los elementos no se encontraban correctamente estructirados en las distintas dimensiones.',
+            changes: 'Se incorporaron las propiedades para las imagenes y organizacion de los elementos en la pagina    .'
         },
         {
             date: '28 de abril de 2026',
