@@ -9,9 +9,102 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body data-page="home">
-    <div id="app"></div>
-    <script src="js/data.js"></script>
-    <script src="js/app.js"></script>
+<body>
+    <header class="site-header">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <p class="eyebrow">Sitio grupal creado con HTML, CSS y JavaScript vanilla.</p>
+                <h1 class="hero-title">Grupo 2D</h1>
+                <p class="hero-copy">
+                    Presentamos al equipo, sus intereses y el proceso de desarrollo de nuestro trabajo practico.
+                </p>
+            </div>
+            <dl class="hero-stats">
+                <div class="stat-item">
+                    <dt>integrantes</dt>
+                    <dd>5</dd>
+                </div>
+                <div class="stat-item">
+                    <dt>entradas</dt>
+                    <dd>3</dd>
+                </div>
+                <div class="stat-item">
+                    <dt>vanilla</dt>
+                    <dd>100%</dd>
+                </div>
+            </dl>
+        </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Navegacion principal">
+        <div class="container nav-list">
+            <a class="nav-link is-active" href="index.html">Inicio</a>
+            <a class="nav-link" href="bitacora.html">Bitacora</a>
+            <a class="nav-link" href="integrante1.html">Integrante 1</a>
+            <a class="nav-link" href="integrante2.html">Integrante 2</a>
+            <a class="nav-link" href="integrante3.html">Integrante 3</a>
+            <a class="nav-link" href="integrante4.html">Guillermo Novillo</a>
+            <a class="nav-link" href="integrante5.html">Integrante 5</a>
+        </div>
+    </nav>
+
+    <main class="site-main">
+        <div class="container page-stack">
+            <section class="section-heading">
+                <p class="eyebrow">Equipo</p>
+                <h2>Integrantes del proyecto</h2>
+            </section>
+
+            <section class="member-grid">
+                <a class="member-card" href="integrante1.html" style="--member-accent: #2f7a5f;">
+                    <span class="member-number">1</span>
+                    <span class="member-name">Integrante 1</span>
+                    <span class="member-meta">4 habilidades | Ciudad de residencia</span>
+                </a>
+
+                <a class="member-card" href="integrante2.html" style="--member-accent: #c4513b;">
+                    <span class="member-number">2</span>
+                    <span class="member-name">Integrante 2</span>
+                    <span class="member-meta">4 habilidades | Ciudad de residencia</span>
+                </a>
+
+                <a class="member-card" href="integrante3.html" style="--member-accent: #476bb3;">
+                    <span class="member-number">3</span>
+                    <span class="member-name">Integrante 3</span>
+                    <span class="member-meta">4 habilidades | Ciudad de residencia</span>
+                </a>
+
+                <a class="member-card" href="integrante4.html" style="--member-accent: #a35f16;">
+                    <span class="member-number">4</span>
+                    <span class="member-name">Guillermo Novillo</span>
+                    <span class="member-meta">Portfolio personal | Full Stack</span>
+                </a>
+
+                <a class="member-card" href="integrante5.html" style="--member-accent: #7b4fa3;">
+                    <span class="member-number">5</span>
+                    <span class="member-name">Integrante 5</span>
+                    <span class="member-meta">4 habilidades | Ciudad de residencia</span>
+                </a>
+            </section>
+
+            <section class="message-panel">
+                <div>
+                    <p class="eyebrow">Interactividad</p>
+                    <h2>Mensajes del proyecto</h2>
+                    <p class="message-output is-visible">
+                        Bienvenido al proyecto. Cada tarjeta conecta con una pagina individual del equipo.
+                    </p>
+                </div>
+                <a class="button button-primary" href="bitacora.html">Ver bitacora</a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 Grupo 2D</p>
+            <p>HTML + CSS + JavaScript vanilla</p>
+        </div>
+    </footer>
 </body>
 </html>

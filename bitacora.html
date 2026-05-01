@@ -3,15 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitácora - Grupo 2D</title>
+    <title>Bitacora - Grupo 2D</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body data-page="log">
-    <div id="app"></div>
-    <script src="js/data.js"></script>
-    <script src="js/app.js"></script>
+<body>
+    <header class="site-header">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <p class="eyebrow">Grupo 2D</p>
+                <h1 class="hero-title">Bitacora del proyecto</h1>
+                <p class="hero-copy">
+                    Registro de decisiones, dificultades y cambios importantes durante la implementacion.
+                </p>
+            </div>
+            <dl class="hero-stats">
+                <div class="stat-item">
+                    <dt>integrantes</dt>
+                    <dd>5</dd>
+                </div>
+                <div class="stat-item">
+                    <dt>entradas</dt>
+                    <dd>3</dd>
+                </div>
+                <div class="stat-item">
+                    <dt>vanilla</dt>
+                    <dd>100%</dd>
+                </div>
+            </dl>
+        </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Navegacion principal">
+        <div class="container nav-list">
+            <a class="nav-link" href="index.html">Inicio</a>
+            <a class="nav-link is-active" href="bitacora.html">Bitacora</a>
+            <a class="nav-link" href="integrante1.html">Integrante 1</a>
+            <a class="nav-link" href="integrante2.html">Integrante 2</a>
+            <a class="nav-link" href="integrante3.html">Integrante 3</a>
+            <a class="nav-link" href="integrante4.html">Guillermo Novillo</a>
+            <a class="nav-link" href="integrante5.html">Integrante 5</a>
+        </div>
+    </nav>
+
+    <main class="site-main">
+        <div class="container page-stack">
+            <section class="section-heading">
+                <p class="eyebrow">Proceso</p>
+                <h2>Bitacora de desarrollo</h2>
+            </section>
+
+            <section class="timeline">
+                <article class="timeline-entry">
+                    <p class="timeline-date">12 de abril de 2026</p>
+                    <h3>Inicio del proyecto</h3>
+                    <p class="timeline-text"><strong>Decisiones de diseño: </strong>Se definio una estructura simple con HTML en la raiz y carpetas separadas para CSS, JS e imagenes.</p>
+                    <p class="timeline-text"><strong>Dificultades: </strong>El primer desafio fue mantener las paginas consistentes sin repetir demasiado codigo.</p>
+                    <p class="timeline-text"><strong>Cambios: </strong>Se creo la portada, las paginas individuales y la seccion de bitacora.</p>
+                </article>
+
+                <article class="timeline-entry">
+                    <p class="timeline-date">12 de abril de 2026</p>
+                    <h3>Interactividad inicial</h3>
+                    <p class="timeline-text"><strong>Decisiones de diseño: </strong>Se agregaron botones para mostrar mensajes, cambiar el estilo de la foto y desplegar informacion extra.</p>
+                    <p class="timeline-text"><strong>Dificultades: </strong>Los scripts de cada integrante repetian la misma logica.</p>
+                    <p class="timeline-text"><strong>Cambios: </strong>Se mantuvo la funcionalidad y se identifico la necesidad de centralizar componentes.</p>
+                </article>
+
+                <article class="timeline-entry">
+                    <p class="timeline-date">28 de abril de 2026</p>
+                    <h3>Refactor reutilizable</h3>
+                    <p class="timeline-text"><strong>Decisiones de diseño: </strong>Se separaron los datos del renderizado para que el sitio pueda crecer sin copiar bloques de HTML.</p>
+                    <p class="timeline-text"><strong>Dificultades: </strong>Habia textos mal codificados y duplicacion entre paginas.</p>
+                    <p class="timeline-text"><strong>Cambios: </strong>Se incorporaron js/data.js y js/app.js como base comun para la portada, integrantes y bitacora.</p>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 Grupo 2D</p>
+            <p>HTML + CSS + JavaScript vanilla</p>
+        </div>
+    </footer>
 </body>
 </html>
