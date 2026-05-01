@@ -266,6 +266,7 @@ img {
     border-radius: var(--radius);
     cursor: pointer;
     font-weight: 700;
+    text-decoration: none;
     transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
 }
 
@@ -286,6 +287,7 @@ img {
 
 .button-light {
     padding: 0.7rem 1rem;
+    border: 1.5px solid var(--color-line);
     background: var(--color-surface);
     color: var(--color-primary-dark);
 }
