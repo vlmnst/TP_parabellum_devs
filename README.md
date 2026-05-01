@@ -31,10 +31,18 @@ Sitio web grupal desarrollado como trabajo práctico con HTML, CSS y JavaScript 
 
 ## Funciones JavaScript
 
-- Portada: botón que rota mensajes dinámicos.
-- Páginas de integrantes: botón para cambiar el estilo visual del avatar.
-- Páginas de integrantes: botón para mostrar u ocultar información adicional.
-- Navegación: se genera desde los datos y marca automáticamente la página activa.
+### Portada (`index.html`)
+
+| Función              | Descripción                                                                                                                                                      | Sección                    |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- |
+| Rotación de mensajes | Un botón cicla por una lista de mensajes del equipo. Cada clic oculta el texto actual con una transición de opacidad y muestra el siguiente mensaje de la lista. | Panel "Mensajes dinámicos" |
+
+### Perfil de Valeria (`integrante2.html`)
+
+| Función                       | Descripción                                                                                                                                                                                       | Sección                                |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
+| Cambiar estilo de foto        | Un botón recorre un ciclo de 5 filtros CSS aplicados sobre la foto de perfil: sin filtro, escala de grises, sépia, rotación de tono y saturación aumentada. Cada clic avanza al siguiente estilo. | Columna izquierda del perfil           |
+| Flip cards películas / discos | Tres cards generadas dinámicamente por JavaScript con efecto de giro 3D al pasar el mouse. El frente muestra una película favorita y el dorso muestra un disco favorito.                          | Sección "Películas y discos favoritos" |
 
 ## Cómo personalizar
 
