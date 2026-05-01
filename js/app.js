@@ -39,6 +39,14 @@
             element.setAttribute('aria-label', options.ariaLabel);
         }
 
+        if (options.target) {
+            element.target = options.target;
+        }
+
+        if (options.rel) {
+            element.rel = options.rel;
+        }
+
         if (options.style) {
             Object.entries(options.style).forEach(([property, value]) => {
                 if (property.startsWith('--')) {
@@ -183,6 +191,7 @@
     }
 
     function renderMemberCard(member) {
+        const meta = member.cardMeta || `${member.skills.length} habilidades · ${member.location}`;
         return createElement('a', {
             className: 'member-card',
             href: `integrante${member.id}.html`,
@@ -192,7 +201,7 @@
             createElement('span', { className: 'member-name', text: member.name }),
             createElement('span', {
                 className: 'member-meta',
-                text: `${member.skills.length} habilidades · ${member.location}`
+                text: meta
             })
         ]);
     }
@@ -248,13 +257,13 @@
         renderShell(content, {
             eyebrow: 'Tarjeta de presentación',
             title: member.name,
-            copy: `${member.location} · ${member.age} años`
+            copy: member.heroCopy || `${member.location} · ${member.age} años`
         });
     }
 
     function renderProfileAside(member) {
         const photo = createElement('img', {
-            className: 'profile-photo',
+            className: `profile-photo${member.photoClass ? ` ${member.photoClass}` : ''}`,
             src: avatarSource(member),
             alt: `Avatar de ${member.name}`
         });
@@ -282,22 +291,59 @@
             Object.assign(photo.style, styles[styleIndex]);
         });
 
+        const summaryChildren = [
+            createElement('p', { className: 'eyebrow', text: 'Perfil' }),
+            createElement('h2', { text: member.name })
+        ];
+
+        if (member.headline) {
+            summaryChildren.push(createElement('p', { className: 'profile-headline', text: member.headline }));
+        } else {
+            summaryChildren.push(createElement('p', { text: member.location }));
+            summaryChildren.push(createElement('p', { text: `${member.age} años` }));
+        }
+
+        if (member.quickFacts) {
+            summaryChildren.push(
+                createElement('ul', { className: 'quick-fact-list' }, member.quickFacts.map((fact) =>
+                    createElement('li', { text: fact })
+                ))
+            );
+        }
+
+        const asideChildren = [
+            photo,
+            createElement('div', { className: 'profile-summary' }, summaryChildren),
+            button
+        ];
+
+        if (member.links) {
+            asideChildren.push(
+                createElement('div', { className: 'profile-links' }, member.links.map((link) =>
+                    createElement('a', {
+                        className: 'button button-light',
+                        href: link.href,
+                        text: link.label,
+                        target: '_blank',
+                        rel: 'noreferrer noopener'
+                    })
+                ))
+            );
+        }
+
         return createElement('aside', {
             className: 'profile-aside',
             style: { '--member-accent': member.accent }
-        }, [
-            photo,
-            createElement('div', { className: 'profile-summary' }, [
-                createElement('p', { className: 'eyebrow', text: 'Perfil' }),
-                createElement('h2', { text: member.name }),
-                createElement('p', { text: member.location }),
-                createElement('p', { text: `${member.age} años` })
-            ]),
-            button
-        ]);
+        }, asideChildren);
     }
 
     function renderProfileDetails(member) {
+        if (member.sections) {
+            return createElement('article', { className: 'profile-card profile-card-portfolio' },
+                member.sections.map(renderSection)
+            );
+        }
+
         const extra = createElement('div', { className: 'extra-info is-hidden' }, [
             createElement('p', { text: member.extra })
         ]);
@@ -327,6 +373,89 @@
             createElement('ul', { className: 'tag-list' }, items.map((item) => (
                 createElement('li', { text: item })
             )))
+        ]);
+    }
+
+    function renderSection(section) {
+        const renderers = {
+            intro: renderSectionIntro,
+            stack: renderSectionStack,
+            projects: renderSectionProjects,
+            focus: renderSectionFocus,
+            extra: renderSectionExtra,
+            list: (s) => renderListSection(s.title, s.items)
+        };
+        const fn = renderers[section.type];
+        return fn ? fn(section) : createElement('div', {});
+    }
+
+    function renderSectionIntro(section) {
+        return createElement('section', { className: 'info-section info-section-intro' }, [
+            createElement('h3', { text: section.title }),
+            createElement('p', { className: 'section-copy', text: section.text })
+        ]);
+    }
+
+    function renderSectionStack(section) {
+        return createElement('section', { className: 'info-section' }, [
+            createElement('h3', { text: section.title }),
+            createElement('div', { className: 'stack-grid' }, section.groups.map((group) => {
+                const children = [createElement('h4', { text: group.name })];
+                if (group.description) {
+                    children.push(createElement('p', { className: 'stack-copy', text: group.description }));
+                }
+                children.push(
+                    createElement('ul', { className: 'tag-list' }, group.items.map((item) =>
+                        createElement('li', { text: item })
+                    ))
+                );
+                return createElement('article', {
+                    className: `stack-card${group.featured ? ' stack-card-featured' : ''}`
+                }, children);
+            }))
+        ]);
+    }
+
+    function renderSectionProjects(section) {
+        return createElement('section', { className: 'info-section' }, [
+            createElement('h3', { text: section.title }),
+            createElement('div', { className: 'project-grid' }, section.items.map((project) => {
+                const link = project.href
+                    ? createElement('a', {
+                        className: 'card-link',
+                        href: project.href,
+                        text: project.linkLabel || 'Ver proyecto',
+                        target: '_blank',
+                        rel: 'noreferrer noopener'
+                    })
+                    : createElement('span', { className: 'card-link card-link-muted', text: project.linkLabel || 'Próximamente' });
+                return createElement('article', { className: 'project-card' }, [
+                    createElement('div', { className: 'project-card-copy' }, [
+                        createElement('h4', { text: project.name }),
+                        createElement('p', { className: 'project-meta', text: project.meta }),
+                        createElement('p', { className: 'section-copy', text: project.description })
+                    ]),
+                    link
+                ]);
+            }))
+        ]);
+    }
+
+    function renderSectionFocus(section) {
+        return createElement('section', { className: 'info-section' }, [
+            createElement('h3', { text: section.title }),
+            createElement('div', { className: 'focus-grid' }, section.items.map((item) =>
+                createElement('article', { className: 'focus-card' }, [
+                    createElement('h4', { text: item.name }),
+                    createElement('p', { className: 'section-copy', text: item.text })
+                ])
+            ))
+        ]);
+    }
+
+    function renderSectionExtra(section) {
+        return createElement('div', { className: 'extra-info' }, [
+            createElement('p', { text: section.text })
         ]);
     }
 
