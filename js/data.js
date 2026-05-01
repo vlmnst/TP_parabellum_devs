@@ -33,11 +33,74 @@ window.APP_DATA = {
             location: 'Córdoba, Provincia de Córdoba',
             age: 30,
             photo: '../img/perfil_vale.png',
+            photoClass: 'profile-photo-custom',
             accent: '#c4513b',
-            skills: ['Pensamiento analítico', 'Orientación a solución', 'Backend'],
-            movies: ['El diablo viste a la moda', 'El Club de la Pelea', 'Legalmente Rubia'],
-            albums: ['LUX', 'Almendra', 'La vida era mas corta'],
-            extra: 'Disfruta salir a patinar, aprender cosas nuevas y compartir experiencias con amigos.'
+            cardMeta: 'Desarrolladora Backend · AWS',
+            heroCopy: 'Desarrolladora backend con experiencia en AWS serverless, bases de datos relacionales y no relacionales, enfocada en soluciones escalables e innovadoras.',
+            headline: 'Programadora con enfoque en backend, apasionada por investigar y resolver problemas a través de procesos innovadores.',
+            quickFacts: [
+                'JavaScript · TypeScript · Node.js',
+                'AWS: Lambda, API Gateway, OpenSearch, DynamoDB',
+                'MySQL · Snowflake · Soluciones escalables'
+            ],
+            links: [
+                { label: 'GitHub', href: 'https://github.com/vlmnst/TP_parabellum_devs' },
+                { label: 'LinkedIn', href: 'https://www.linkedin.com/in/valeria-mansueto-dev/' }
+            ],
+            skills: ['JavaScript', 'TypeScript', 'Node.js', 'AWS', 'MySQL', 'Snowflake'],
+            sections: [
+                {
+                    type: 'intro',
+                    title: 'Sobre mí',
+                    text: 'Soy Valeria, programadora con un enfoque en backend. Lo que más me gusta de mi trabajo es la oportunidad de investigar, resolver problemas y ayudar a las personas a través de procesos innovadores. He trabajado en diversos proyectos de desarrollo web adquiriendo habilidades en programación, gestión de proyectos y atención al cliente. Me considero una persona comprometida, responsable y enfocada en ofrecer soluciones escalables y fáciles de mantener.'
+                },
+                {
+                    type: 'stack',
+                    title: 'Tecnologías que uso',
+                    groups: [
+                        {
+                            name: 'Lenguajes',
+                            featured: true,
+                            description: 'Lenguajes que uso para construir lógica de negocio, automatizaciones e integraciones.',
+                            items: ['JavaScript', 'TypeScript', 'JSON', 'Bash']
+                        },
+                        {
+                            name: 'Cloud & Serverless (AWS)',
+                            items: ['Lambda', 'API Gateway', 'OpenSearch', 'DynamoDB']
+                        },
+                        {
+                            name: 'Bases de datos',
+                            items: ['MySQL', 'Snowflake']
+                        },
+                        {
+                            name: 'Runtime & Herramientas',
+                            items: ['Node.js', 'Git']
+                        }
+                    ]
+                },
+                {
+                    type: 'focus',
+                    title: 'Lo que me define',
+                    items: [
+                        {
+                            name: 'Backend e innovación',
+                            text: 'Me especializo en construir lógica de negocio robusta e integraciones entre servicios, siempre buscando soluciones escalables y fáciles de mantener.'
+                        },
+                        {
+                            name: 'Investigación y resolución',
+                            text: 'Lo que más disfruto es enfrentar problemas complejos, investigar opciones y encontrar la solución que mejor se adapta al contexto real del proyecto.'
+                        },
+                        {
+                            name: 'Trabajo en equipo',
+                            text: 'Me gusta colaborar de manera cercana para alcanzar objetivos comunes, compartir lo aprendido y construir junto a otros.'
+                        }
+                    ]
+                },
+                {
+                    type: 'extra',
+                    text: 'Estoy completamente comprometida con mi trabajo y me aseguro de brindar lo mejor de mí. Si buscás a alguien capaz de ofrecer soluciones innovadoras y de calidad, estaré encantada de trabajar junto a vos.'
+                }
+            ]
         },
         {
             id: '3',

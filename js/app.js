@@ -249,7 +249,10 @@
 
         document.title = `${member.name} - ${data.team.name}`;
 
-        const content = createElement('div', { className: 'container profile-layout' }, [
+        const content = createElement('div', {
+            className: 'container profile-layout',
+            style: { '--member-accent': member.accent }
+        }, [
             renderProfileAside(member),
             renderProfileDetails(member)
         ]);
