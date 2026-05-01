@@ -29,15 +29,88 @@ window.APP_DATA = {
         },
         {
             id: '2',
-            name: 'Integrante 2',
-            location: 'Ciudad de residencia',
-            age: 20,
-            photo: '',
+            name: 'Valeria',
+            location: 'Córdoba, Provincia de Córdoba',
+            age: 30,
+            photo: '../img/perfil_vale.png',
+            photoClass: 'profile-photo-custom',
             accent: '#c4513b',
-            skills: ['Maquetación', 'Accesibilidad', 'Diseño visual', 'Git'],
-            movies: ['Película 1', 'Película 2', 'Película 3'],
-            albums: ['Disco 1', 'Disco 2', 'Disco 3'],
-            extra: 'Disfruta combinar organización visual con detalles prácticos que hagan más agradable navegar el sitio.'
+            heroCopy: 'Desarrolladora backend con experiencia en AWS serverless, bases de datos relacionales y no relacionales, enfocada en soluciones escalables e innovadoras.',
+            headline: 'Programadora con enfoque en backend, apasionada por investigar y resolver problemas a través de procesos innovadores.',
+            quickFacts: [
+                'JavaScript · TypeScript · Node.js',
+                'AWS: Lambda, API Gateway, OpenSearch, DynamoDB',
+                'MySQL · Snowflake · Soluciones escalables'
+            ],
+            links: [
+                { label: 'GitHub', href: 'https://github.com/vlmnst/TP_parabellum_devs' },
+                { label: 'LinkedIn', href: 'https://www.linkedin.com/in/valeria-mansueto-dev/' }
+            ],
+            skills: ['JavaScript', 'TypeScript', 'Node.js', 'AWS', 'MySQL', 'Snowflake'],
+            sections: [
+                {
+                    type: 'intro',
+                    title: 'Sobre mí',
+                    text: 'Soy Valeria, programadora con un enfoque en backend. Lo que más me gusta de mi trabajo es la oportunidad de investigar, resolver problemas y ayudar a las personas a través de procesos innovadores. He trabajado en diversos proyectos de desarrollo web adquiriendo habilidades en programación, gestión de proyectos y atención al cliente. Me considero una persona comprometida, responsable y enfocada en ofrecer soluciones escalables y fáciles de mantener.'
+                },
+                {
+                    type: 'stack',
+                    title: 'Tecnologías que uso',
+                    groups: [
+                        {
+                            name: 'Lenguajes',
+                            featured: true,
+                            description: 'Lenguajes que uso para construir lógica de negocio, automatizaciones e integraciones.',
+                            items: ['JavaScript', 'TypeScript', 'JSON', 'Bash']
+                        },
+                        {
+                            name: 'Cloud & Serverless (AWS)',
+                            items: ['Lambda', 'API Gateway', 'OpenSearch', 'DynamoDB']
+                        },
+                        {
+                            name: 'Bases de datos',
+                            items: ['MySQL', 'Snowflake']
+                        },
+                        {
+                            name: 'Runtime & Herramientas',
+                            items: ['Node.js', 'Git']
+                        }
+                    ]
+                },
+                {
+                    type: 'focus',
+                    title: 'Lo que me define',
+                    items: [
+                        {
+                            name: 'Backend e innovación',
+                            text: 'Me especializo en construir lógica de negocio robusta e integraciones entre servicios, siempre buscando soluciones escalables y fáciles de mantener.'
+                        },
+                        {
+                            name: 'Investigación y resolución',
+                            text: 'Lo que más disfruto es enfrentar problemas complejos, investigar opciones y encontrar la solución que mejor se adapta al contexto real del proyecto.'
+                        },
+                        {
+                            name: 'Trabajo en equipo',
+                            text: 'Me gusta colaborar de manera cercana para alcanzar objetivos comunes, compartir lo aprendido y construir junto a otros.'
+                        }
+                    ]
+                },
+                {
+                    type: 'flip',
+                    title: 'Películas y discos favoritos',
+                    frontLabel: '🎬 Película',
+                    backLabel: '🎵 Disco',
+                    pairs: [
+                        { front: 'El Diablo viste a la moda', back: 'LUX' },
+                        { front: 'El Club de la Pelea', back: 'Almendra' },
+                        { front: 'Legalmente Rubia', back: 'La vida era más corta' }
+                    ]
+                },
+                {
+                    type: 'extra',
+                    text: 'Estoy completamente comprometida con mi trabajo y me aseguro de brindar lo mejor de mí. Si buscás a alguien capaz de ofrecer soluciones innovadoras y de calidad, estaré encantada de trabajar junto a vos.'
+                }
+            ]
         },
         {
             id: '3',
@@ -94,9 +167,9 @@ window.APP_DATA = {
         {
             date: '25 de abril de 2026',
             title: 'Diseño responsivo',
-            decisions: 'Se agregaron propiedades para que la pagina pueda ser visualizada en los distintos dispositivos.',
-            challenges: 'Los elementos no se encontraban correctamente estructirados en las distintas dimensiones.',
-            changes: 'Se incorporaron las propiedades para las imagenes y organizacion de los elementos en la pagina    .'
+            decisions: 'Se agregaron propiedades para que la página pueda ser visualizada en los distintos dispositivos.',
+            challenges: 'Los elementos no se encontraban correctamente estructurados en las distintas dimensiones.',
+            changes: 'Se incorporaron las propiedades para las imágenes y organización de los elementos en la página.'
         },
         {
             date: '28 de abril de 2026',
@@ -104,6 +177,13 @@ window.APP_DATA = {
             decisions: 'Se separaron los datos del renderizado para que el sitio pueda crecer sin copiar bloques de HTML.',
             challenges: 'Había textos mal codificados y duplicación entre páginas.',
             changes: 'Se incorporaron js/data.js y js/app.js como base común para la portada, integrantes y bitácora.'
+        },
+        {
+            date: '1 de mayo de 2026',
+            title: 'Conexión HTML–JavaScript',
+            decisions: 'Se decidió eliminar el contenido hardcodeado de los archivos HTML y conectarlos al sistema de datos centralizado.',
+            challenges: 'Los HTML tenían contenido estático desincronizado con data.js, lo que obligaba a actualizar varios archivos ante cada cambio.',
+            changes: 'Se añadieron los atributos data-page y data-member-id en cada <body>, el contenedor <div id="app"></div> y las etiquetas <script> que cargan data.js y app.js. Ahora todo el contenido lo genera app.js a partir de los datos.'
         }
     ]
 };
