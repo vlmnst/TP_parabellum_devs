@@ -386,10 +386,30 @@
             projects: renderSectionProjects,
             focus: renderSectionFocus,
             extra: renderSectionExtra,
-            list: (s) => renderListSection(s.title, s.items)
+            list: (s) => renderListSection(s.title, s.items),
+            flip: renderSectionFlip
         };
         const fn = renderers[section.type];
         return fn ? fn(section) : createElement('div', {});
+    }
+
+    function renderSectionFlip(section) {
+        const cards = section.pairs.map((pair) => {
+            const front = createElement('div', { className: 'flip-face flip-front' }, [
+                createElement('p', { className: 'flip-label', text: section.frontLabel || 'Frente' }),
+                createElement('p', { className: 'flip-value', text: pair.front })
+            ]);
+            const back = createElement('div', { className: 'flip-face flip-back' }, [
+                createElement('p', { className: 'flip-label', text: section.backLabel || 'Dorso' }),
+                createElement('p', { className: 'flip-value', text: pair.back })
+            ]);
+            const inner = createElement('div', { className: 'flip-inner' }, [front, back]);
+            return createElement('div', { className: 'flip-card' }, [inner]);
+        });
+        return createElement('section', { className: 'info-section' }, [
+            createElement('h3', { text: section.title }),
+            createElement('div', { className: 'flip-grid' }, cards)
+        ]);
     }
 
     function renderSectionIntro(section) {

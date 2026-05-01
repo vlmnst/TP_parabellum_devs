@@ -95,8 +95,17 @@ window.APP_DATA = {
                         }
                     ]
                 },
-                { type: 'list', title: 'Películas favoritas', items: ['El Diablo viste a la moda', 'El Club de la Pelea', 'Legalmente Rubia'] },
-                { type: 'list', title: 'Discos favoritos', items: ['LUX', 'Almendra', 'La vida era mas corta'] },
+                {
+                    type: 'flip',
+                    title: 'Películas y discos favoritos',
+                    frontLabel: '🎬 Película',
+                    backLabel: '🎵 Disco',
+                    pairs: [
+                        { front: 'El Diablo viste a la moda', back: 'LUX' },
+                        { front: 'El Club de la Pelea', back: 'Almendra' },
+                        { front: 'Legalmente Rubia', back: 'La vida era más corta' }
+                    ]
+                },
                 {
                     type: 'extra',
                     text: 'Estoy completamente comprometida con mi trabajo y me aseguro de brindar lo mejor de mí. Si buscás a alguien capaz de ofrecer soluciones innovadoras y de calidad, estaré encantada de trabajar junto a vos.'
