@@ -44,6 +44,13 @@ Sitio web grupal desarrollado como trabajo práctico con HTML, CSS y JavaScript 
 | Cambiar estilo de foto        | Un botón recorre un ciclo de 5 filtros CSS aplicados sobre la foto de perfil: sin filtro, escala de grises, sépia, rotación de tono y saturación aumentada. Cada clic avanza al siguiente estilo. | Columna izquierda del perfil           |
 | Flip cards películas / discos | Tres cards generadas dinámicamente por JavaScript con efecto de giro 3D al pasar el mouse. El frente muestra una película favorita y el dorso muestra un disco favorito.                          | Sección "Películas y discos favoritos" |
 
+### Perfil de Anto (`integrante3.html`)
+| Cambiar estilo de foto        | Un botón recorre un ciclo de 5 filtros CSS aplicados sobre la foto de perfil: sin filtro, escala de grises, sépia, rotación de tono y saturación aumentada. Cada clic avanza al siguiente estilo. | Columna izquierda del perfil.           |
+| Cambio de color en list | Al pasar el cursor por cada elemento de la lista, cambia como iluminando el color de fondo y se "eleva" un poco su contenido | Sección Links y botón "Cambiar estilo" del lado izquierdo. |
+| Cambio de color en list | Al pasar el cursor por cada elemento de la lista, cambia el color de fondo, de letra y se "eleva" un poco su contenedor y contenido | Sección "Habilidades". |
+| Columnas con zoom | Al pasar el cursor por cada columna, se hace un zoom que acerca y las ilumina sutilmente | Sección "Peliculas favoritas". |
+| Tarjetas giratorias | Al pasar el cursor por cada tarjeta, esta gira. En el frente se muestra el nombre del disco y en el dorso el nombre del artista. | Sección "Discos favoritos". | 
+
 ## Cómo personalizar
 
 Para cambiar nombres, edades, ubicación, habilidades, películas, discos, colores o textos extra, editar los objetos dentro de `js/data.js`.
