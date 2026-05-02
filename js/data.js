@@ -20,12 +20,47 @@ window.APP_DATA = {
             name: 'Nico',
             location: 'Rio Hondo, Provincia de Santiago del Estero',
             age: 31,
-            photo: '../img/foto_perfil_nico.jpg',
+            photo: 'img/foto_perfil_nico.jpg',
+            photoClass: 'nico-photo',
             accent: '#2f7a5f',
+            heroCopy: 'Rio Hondo, Santiago del Estero | 31 anos',
+            headline: 'Desarrollador en formacion con interes en interfaces claras y proyectos concretos.',
+            cardMeta: 'HTML + React | MySQL | Frontend',
+            quickFacts: [
+                'Rio Hondo, Santiago del Estero',
+                '31 anos',
+                'HTML, CSS, JavaScript, React y MySQL'
+            ],
             skills: ['HTML semántico', 'CSS responsive', 'JavaScript básico', 'React', 'MySql', 'Trabajo en equipo'],
             movies: ['El señor de los anillos', 'Rocky IV', 'En busca de la felicidad'],
             albums: ['Green River', 'Californication', 'Magos, espadas y rosas'],
-            extra: 'Le interesa aprender dia a dia, en distintos grupos de trabajo, creando proyectos concretos y mejorando la forma en que presenta información en la web.'
+            extra: 'Le interesa aprender dia a dia, en distintos grupos de trabajo, creando proyectos concretos y mejorando la forma en que presenta información en la web.',
+            sections: [
+                {
+                    type: 'intro',
+                    title: 'Sobre Nico',
+                    text: 'Le interesa aprender dia a dia en distintos grupos de trabajo, construir proyectos utiles y mejorar constantemente la forma en que presenta informacion en la web.'
+                },
+                {
+                    type: 'list',
+                    title: 'Habilidades',
+                    items: ['HTML semantico', 'CSS responsive', 'JavaScript basico', 'React', 'MySQL', 'Trabajo en equipo']
+                },
+                {
+                    type: 'list',
+                    title: 'Peliculas favoritas',
+                    items: ['El senor de los anillos', 'Rocky IV', 'En busca de la felicidad']
+                },
+                {
+                    type: 'list',
+                    title: 'Discos favoritos',
+                    items: ['Green River', 'Californication', 'Magos, espadas y rosas']
+                },
+                {
+                    type: 'extra',
+                    text: 'Su perfil combina curiosidad tecnica con ganas de seguir creciendo en proyectos reales, especialmente donde pueda practicar frontend, ordenar contenido y mejorar la experiencia visual.'
+                }
+            ]
         },
         {
             id: '2',
@@ -172,15 +207,108 @@ window.APP_DATA = {
         },
         {
             id: '4',
-            name: 'Integrante 4',
-            location: 'Ciudad de residencia',
+            name: 'Guillermo Novillo',
+            location: 'Argentina',
             age: 20,
-            photo: '',
+            photo: 'img/gui.png',
+            photoClass: 'profile-photo-custom',
             accent: '#a35f16',
-            skills: ['Organización', 'CSS Grid', 'Flexbox', 'Documentación'],
-            movies: ['Película 1', 'Película 2', 'Película 3'],
-            albums: ['Disco 1', 'Disco 2', 'Disco 3'],
-            extra: 'Se enfoca en documentar avances, ordenar tareas y sostener una estructura clara del proyecto.'
+            heroCopy: 'Desarrollador Full Stack con experiencia construyendo soluciones web y de escritorio, integrando backend, frontend y bases de datos para convertir ideas en proyectos reales.',
+            headline: 'Desarrollador Full Stack enfocado en backend, aplicaciones de gestion e integraciones entre software, datos y procesos.',
+            cardMeta: 'Full Stack | Backend | Desktop',
+            quickFacts: [
+                'Python, JavaScript, C# y SQL',
+                'Experiencia con Node.js, Django, React y Electron',
+                'Interes en seguridad, automatizacion y agentes de IA'
+            ],
+            links: [
+                { label: 'GitHub', href: 'https://github.com/guinovi' },
+                { label: 'LinkedIn', href: 'https://www.linkedin.com/in/guillermo-novillo-551367144/' }
+            ],
+            skills: ['Python', 'JavaScript', 'C#', 'SQL', 'Node.js', 'Electron'],
+            sections: [
+                {
+                    type: 'intro',
+                    title: 'Sobre mi',
+                    text: 'Soy un desarrollador con un enfoque integral del software. Me interesa especialmente la logica de backend, la arquitectura de sistemas y la posibilidad de conectar interfaces, datos y procesos en soluciones utiles. Disfruto aprender tecnologias nuevas, resolver problemas concretos y llevar ideas desde la etapa inicial hasta una implementacion funcional.'
+                },
+                {
+                    type: 'stack',
+                    title: 'Tecnologias que uso',
+                    groups: [
+                        {
+                            name: 'Lenguajes',
+                            featured: true,
+                            description: 'Base principal para desarrollar interfaces, logica de negocio, automatizaciones y aplicaciones orientadas a escritorio y web.',
+                            items: ['Python', 'JavaScript', 'C#', 'SQL', 'HTML', 'CSS', 'JSON', 'Bash']
+                        },
+                        {
+                            name: 'Frameworks y APIs',
+                            items: ['Django', 'FastAPI', 'Pandas', 'React', 'Express', 'Bootstrap', 'jQuery', 'DataTables.js', 'pdfmake']
+                        },
+                        {
+                            name: 'Bases de datos',
+                            items: ['MySQL', 'PostgreSQL', 'Oracle', 'SQLite', 'sqlite3']
+                        },
+                        {
+                            name: 'Herramientas y tecnologias',
+                            items: ['Node.js', 'Git', 'Electron', 'bcrypt', 'jsonwebtoken', 'Seguridad de la informacion', 'CCNA 1']
+                        }
+                    ]
+                },
+                {
+                    type: 'projects',
+                    title: 'Proyectos destacados',
+                    items: [
+                        {
+                            name: 'MGSEG',
+                            meta: 'Vanilla JS | HTML | CSS',
+                            description: 'Sitio informativo para un emprendimiento de camaras de seguridad, pensado para presentar servicios y generar confianza visual.',
+                            href: 'https://guinovi.github.io/mgseg/'
+                        },
+                        {
+                            name: 'Juegos Clasicos',
+                            meta: 'React',
+                            description: 'Tateti y 4 en linea desarrollados con logica de estados, componentes reutilizables y una interfaz clara para jugar.',
+                            href: 'https://jugando-js.netlify.app/'
+                        },
+                        {
+                            name: 'CRUD Login',
+                            meta: 'Node.js | Express | SQLite',
+                            description: 'Sistema de autenticacion y gestion con foco en rutas protegidas, persistencia de datos y una base solida para crecer.',
+                            href: 'https://crud-login-murex.vercel.app/'
+                        },
+                        {
+                            name: 'Software de Gestion',
+                            meta: 'Electron | Node.js | SQLite3',
+                            description: 'Aplicacion de escritorio en fase de prueba con formularios, reportes PDF y herramientas pensadas para tareas administrativas.',
+                            linkLabel: 'Proyecto en evolucion'
+                        }
+                    ]
+                },
+                {
+                    type: 'focus',
+                    title: 'Especialidades',
+                    items: [
+                        {
+                            name: 'Backend y autenticacion',
+                            text: 'Desarrollo de logica, integracion con bases de datos y sistemas de acceso con una mirada puesta en estructura, seguridad y mantenimiento.'
+                        },
+                        {
+                            name: 'Aplicaciones web y desktop',
+                            text: 'Experiencia construyendo tanto interfaces web como herramientas de escritorio, adaptando cada solucion al contexto de uso real.'
+                        },
+                        {
+                            name: 'Vision integral',
+                            text: 'Mi experiencia en mantenimiento y reparacion de PCs me aporta una perspectiva amplia para conectar hardware, software y experiencia de usuario.'
+                        }
+                    ]
+                },
+                {
+                    type: 'extra',
+                    text: 'Tambien disfruto colaborar, compartir lo que aprendo y seguir perfeccionando mis habilidades con proyectos propios. Hoy sigo profundizando en nuevas tecnologias, seguridad e integracion de agentes inteligentes dentro de flujos de trabajo reales.'
+                }
+            ]
         },
         {
             id: '5',
