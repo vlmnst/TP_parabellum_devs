@@ -191,7 +191,7 @@ window.APP_DATA = {
                     frontLabel: '🎬 Película',
                     backLabel: '🎵 Disco',
                     pairs: [
-                        { front: 'Interestelar', back: 'Somos' },
+                        { front: 'Interestelar', back: 'Súper Terror' },
                         { front: 'Hata el ultimo hombre', back: 'SED' },
                         { front: 'Saga Harry Potter', back: 'La Sintesis O´Konor' }
                     ]
