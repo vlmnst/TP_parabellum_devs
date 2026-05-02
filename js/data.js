@@ -20,12 +20,47 @@ window.APP_DATA = {
             name: 'Nico',
             location: 'Rio Hondo, Provincia de Santiago del Estero',
             age: 31,
-            photo: '../img/foto_perfil_nico.jpg',
+            photo: 'img/foto_perfil_nico.jpg',
+            photoClass: 'nico-photo',
             accent: '#2f7a5f',
+            heroCopy: 'Rio Hondo, Santiago del Estero | 31 anos',
+            headline: 'Desarrollador en formacion con interes en interfaces claras y proyectos concretos.',
+            cardMeta: 'HTML + React | MySQL | Frontend',
+            quickFacts: [
+                'Rio Hondo, Santiago del Estero',
+                '31 anos',
+                'HTML, CSS, JavaScript, React y MySQL'
+            ],
             skills: ['HTML semántico', 'CSS responsive', 'JavaScript básico', 'React', 'MySql', 'Trabajo en equipo'],
             movies: ['El señor de los anillos', 'Rocky IV', 'En busca de la felicidad'],
             albums: ['Green River', 'Californication', 'Magos, espadas y rosas'],
-            extra: 'Le interesa aprender dia a dia, en distintos grupos de trabajo, creando proyectos concretos y mejorando la forma en que presenta información en la web.'
+            extra: 'Le interesa aprender dia a dia, en distintos grupos de trabajo, creando proyectos concretos y mejorando la forma en que presenta información en la web.',
+            sections: [
+                {
+                    type: 'intro',
+                    title: 'Sobre Nico',
+                    text: 'Le interesa aprender dia a dia en distintos grupos de trabajo, construir proyectos utiles y mejorar constantemente la forma en que presenta informacion en la web.'
+                },
+                {
+                    type: 'list',
+                    title: 'Habilidades',
+                    items: ['HTML semantico', 'CSS responsive', 'JavaScript basico', 'React', 'MySQL', 'Trabajo en equipo']
+                },
+                {
+                    type: 'list',
+                    title: 'Peliculas favoritas',
+                    items: ['El senor de los anillos', 'Rocky IV', 'En busca de la felicidad']
+                },
+                {
+                    type: 'list',
+                    title: 'Discos favoritos',
+                    items: ['Green River', 'Californication', 'Magos, espadas y rosas']
+                },
+                {
+                    type: 'extra',
+                    text: 'Su perfil combina curiosidad tecnica con ganas de seguir creciendo en proyectos reales, especialmente donde pueda practicar frontend, ordenar contenido y mejorar la experiencia visual.'
+                }
+            ]
         },
         {
             id: '2',
