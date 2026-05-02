@@ -255,49 +255,65 @@ window.APP_DATA = {
                             name: 'Lenguajes',
                             featured: true,
                             description: 'Base principal para desarrollar interfaces, logica de negocio, automatizaciones y aplicaciones orientadas a escritorio y web.',
-                            items: ['Python', 'JavaScript', 'C#', 'SQL', 'HTML', 'CSS', 'JSON', 'Bash']
+                            items: ['Python', 'JavaScript', 'C#', 'SQL', 'HTML', 'CSS']
                         },
                         {
-                            name: 'Frameworks y APIs',
-                            items: ['Django', 'FastAPI', 'Pandas', 'React', 'Express', 'Bootstrap', 'jQuery', 'DataTables.js', 'pdfmake']
-                        },
-                        {
-                            name: 'Bases de datos',
-                            items: ['MySQL', 'PostgreSQL', 'Oracle', 'SQLite', 'sqlite3']
-                        },
-                        {
-                            name: 'Herramientas y tecnologias',
-                            items: ['Node.js', 'Git', 'Electron', 'bcrypt', 'jsonwebtoken', 'Seguridad de la informacion', 'CCNA 1']
+                            name: 'Ecosistema principal',
+                            description: 'Frameworks, bases de datos y herramientas que mas uso para pasar de una idea a una solucion funcional.',
+                            items: ['Django', 'FastAPI', 'React', 'Node.js', 'Electron', 'PostgreSQL', 'SQLite', 'Git']
                         }
                     ]
                 },
                 {
-                    type: 'projects',
-                    title: 'Proyectos destacados',
-                    items: [
+                    type: 'favorites',
+                    title: 'Pantalla y parlantes',
+                    text: 'Una seleccion personal para salir un rato del codigo y volver con otra energia...',
+                    categories: [
                         {
-                            name: 'MGSEG',
-                            meta: 'Vanilla JS | HTML | CSS',
-                            description: 'Sitio informativo para un emprendimiento de camaras de seguridad, pensado para presentar servicios y generar confianza visual.',
-                            href: 'https://guinovi.github.io/mgseg/'
+                            label: 'Peliculas',
+                            badge: 'Cine',
+                            stageLabel: 'En pantalla',
+                            visualLabel: 'Watch',
+                            items: [
+                                {
+                                    name: 'Interestelar',
+                                    meta: 'Ciencia ficcion | Christopher Nolan',
+                                    note: 'Me atrae por la escala de la historia, la tension constante y esa idea de empujar una solucion hasta el final.'
+                                },
+                                {
+                                    name: 'Hasta el ultimo hombre',
+                                    meta: 'Drama belico | Mel Gibson',
+                                    note: 'La resiliencia del personaje y la conviccion con la que sostiene sus principios es lo que mas me queda.'
+                                },
+                                {
+                                    name: 'Superbad',
+                                    meta: 'Comedia | Greg Mottola',
+                                    note: 'Cuando quiero algo mas liviano, vuelvo a esta por el ritmo, los dialogos y el humor sin demasiadas vueltas.'
+                                }
+                            ]
                         },
                         {
-                            name: 'Juegos Clasicos',
-                            meta: 'React',
-                            description: 'Tateti y 4 en linea desarrollados con logica de estados, componentes reutilizables y una interfaz clara para jugar.',
-                            href: 'https://jugando-js.netlify.app/'
-                        },
-                        {
-                            name: 'CRUD Login',
-                            meta: 'Node.js | Express | SQLite',
-                            description: 'Sistema de autenticacion y gestion con foco en rutas protegidas, persistencia de datos y una base solida para crecer.',
-                            href: 'https://crud-login-murex.vercel.app/'
-                        },
-                        {
-                            name: 'Software de Gestion',
-                            meta: 'Electron | Node.js | SQLite3',
-                            description: 'Aplicacion de escritorio en fase de prueba con formularios, reportes PDF y herramientas pensadas para tareas administrativas.',
-                            linkLabel: 'Proyecto en evolucion'
+                            label: 'Musica',
+                            badge: 'Playlist',
+                            stageLabel: 'En auriculares',
+                            visualLabel: 'Play',
+                            items: [
+                                {
+                                    name: 'Master of Puppets',
+                                    meta: 'Metallica',
+                                    note: 'Me gusta la energia, la precision y la sensacion de avance que sostiene de principio a fin.'
+                                },
+                                {
+                                    name: 'Hybrid Theory',
+                                    meta: 'Linkin Park',
+                                    note: 'Tiene esa mezcla de melodia e intensidad que siempre me funciona cuando necesito subir el ritmo.'
+                                },
+                                {
+                                    name: 'Back in Black',
+                                    meta: 'AC/DC',
+                                    note: 'Cuando busco algo directo y potente, termino volviendo a discos con este tipo de sonido.'
+                                }
+                            ]
                         }
                     ]
                 },
