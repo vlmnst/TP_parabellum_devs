@@ -191,7 +191,12 @@
     }
 
     function renderMemberCard(member) {
-        const meta = member.cardMeta || `${member.skills.length} habilidades · ${member.location}`;
+        let meta;
+        try {
+            meta = member.cardMeta || `${member.skills.length} habilidades · ${member.location}`;
+        } catch (error) {
+            meta = member.cardMeta || `0 habilidades · ${member.location}`;
+        }
         return createElement('a', {
             className: 'member-card',
             href: `integrante${member.id}.html`,

@@ -162,6 +162,7 @@ window.APP_DATA = {
                 { label: 'LinkedIn', href: 'https://www.linkedin.com/in/antonellamasini' }
 
             ],
+            skills: ['Comunicación', 'Diseño visual', 'Testing manual', 'Desarrollo móvil'],
 
             sections: [
                 {
@@ -207,7 +208,7 @@ window.APP_DATA = {
         },
         {
             id: '4',
-            name: 'Guillermo Novillo',
+            name: 'Guille',
             location: 'Argentina',
             age: 20,
             photo: 'img/gui.png',
