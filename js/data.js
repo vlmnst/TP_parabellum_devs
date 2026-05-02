@@ -138,15 +138,68 @@ window.APP_DATA = {
         },
         {
             id: '5',
-            name: 'Integrante 5',
-            location: 'Ciudad de residencia',
-            age: 20,
-            photo: '',
+            name: 'Facundo Bascur',
+            location: 'General Roca, Rio Negro',
+            age: 29,
+            photo: 'img/perfil_facu.png',
+            photoClass: 'profile-photo-custom',
             accent: '#7b4fa3',
-            skills: ['Resolución de problemas', 'UI', 'Investigación', 'Presentación'],
-            movies: ['Película 1', 'Película 2', 'Película 3'],
-            albums: ['Disco 1', 'Disco 2', 'Disco 3'],
-            extra: 'Le interesa resolver problemas de presentación y cuidar que el contenido se entienda rápidamente.'
+            heroCopy: 'Enfocado en la resolución técnica y el desarrollo de software. Actualmente cursando la tecnicatura y trabajando en infraestructura de sistemas para brindar soluciones eficientes y escalables.',
+            headline: 'DEV & SOPORTE IT',
+            links: [
+                { label: 'GitHub', href: 'https://github.com/FacundoBascur' },
+                { label: 'LinkedIn', href: 'https://www.linkedin.com/in/facundo-david-bascur-it-dev/' }
+            ],
+            sections: [
+                {
+                    type: 'intro',
+                    title: 'Desarrollador de Software | Especialista en Soporte IT e Infraestructura',
+                    text: 'Soy un profesional con un perfil híbrido que combina el desarrollo de software con una sólida base en soporte técnico y resolución de incidencias. Mi experiencia en sectores de alta exigencia, como la construcción y la energía fotovoltaica, me permitió forjar una mentalidad práctica y una gran capacidad de respuesta bajo presión. Actualmente, mi enfoque principal está en la transición hacia el desarrollo a tiempo completo, aplicando mi experiencia técnica para construir soluciones digitales eficientes y escalables.'
+                },
+                {
+                    type: 'stack',
+                    title: 'Tecnologías que uso',
+                    groups: [
+                        {
+                            name: 'Lenguajes',
+                            featured: true,
+                            description: 'Backend & Lógica',
+                            items: ['Java', 'C#', 'JavaScript', 'Python', 'JSON']
+                        },
+                        {
+                            name: 'Frontend',
+                            items: ['HTML5', 'CSS3 Avanzado', 'Responsive Design', 'Pannellum.js (Tours 360°)']
+                        },
+                        {
+                            name: 'Backend & Comunicación',
+                            items: ['Node.js', 'Express', 'Nodemailer (SMTP)', 'Fetch API', 'REST API']
+                        },
+                        {
+                            name: 'Bases de Datos',
+                            items: ['MySQL', 'MariaDB', 'SQLite']
+                        },
+                        {
+                            name: 'Herramientas & Soporte IT',
+                            items: ['Git', 'InvGate', 'AnyDesk', 'Infraestructura de Redes']
+                        }
+                    ]
+                },
+                {
+                    type: 'flip',
+                    title: 'Películas y discos favoritos',
+                    frontLabel: '🎬 Película',
+                    backLabel: '🎵 Disco',
+                    pairs: [
+                        { front: 'Interestelar', back: 'Somos' },
+                        { front: 'Hata el ultimo hombre', back: 'SED' },
+                        { front: 'Saga Harry Potter', back: 'La Sintesis O´Konor' }
+                    ]
+                },
+                {
+                    type: 'extra',
+                    text: 'Enfocado en la resolución técnica y el desarrollo de software. Actualmente cursando la tecnicatura y trabajando en infraestructura de sistemas para brindar soluciones eficientes y escalables.'
+                }
+            ]
         }
     ],
     logEntries: [
