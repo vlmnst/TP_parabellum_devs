@@ -164,7 +164,6 @@ window.APP_DATA = {
             ],
             skills: ['Comunicación', 'Diseño visual', 'Testing manual', 'Desarrollo móvil'],
 
-            skills: ['Comunicación', 'Diseño visual', 'Testing manual', 'Desarrollo móvil'],
 
             sections: [
                 {
