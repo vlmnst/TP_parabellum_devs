@@ -1,0 +1,64 @@
+.profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.profile-links .button,
+.card-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.button-primary {
+    background: #fb8f14;
+    box-shadow: 0 10px 18px rgba(251, 143, 20, 0.22);
+}
+
+.button-primary:hover {
+    background: #e07d0d;
+}
+
+.button-light {
+    border: 1.5px solid #fb8f14;
+    background: var(--color-surface);
+    color: #fb8f14;
+}
+
+.button-light:hover {
+    background: rgba(175, 98, 9, 0.08);
+}
+
+.tag-list li {
+    padding: 0.45rem 0.7rem;
+    border: 1px solid #fb8f14;
+    border-radius: var(--radius);
+    background: var(--color-paper);
+    color: #fb8f14;
+    font-weight: 500;
+    transition:
+        transform 180ms ease,
+        background 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        color 180ms ease;
+}
+
+.tag-list li:hover {
+    border-color: #e17a04;
+    background: #e07d0d;
+    color: white;
+    box-shadow: 0 10px 18px rgba(31, 37, 40, 0.09);
+    transform: translateY(-2px) scale(1.02);
+}
+
+.tag-list li:focus-visible {
+    outline: 2px solid rgba(251, 143, 20, 0.45);
+    outline-offset: 2px;
+}
+
+.section-copy {
+    text-align: justify;
+}
