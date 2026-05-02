@@ -164,6 +164,8 @@ window.APP_DATA = {
             ],
             skills: ['Comunicación', 'Diseño visual', 'Testing manual', 'Desarrollo móvil'],
 
+            skills: ['Comunicación', 'Diseño visual', 'Testing manual', 'Desarrollo móvil'],
+
             sections: [
                 {
                     type: 'intro',
@@ -179,7 +181,7 @@ window.APP_DATA = {
 
                 {
                     type: 'focus',
-                    title: 'Películas',
+                    title: 'Películas favoritas',
                     items: [
                         {
                             name: 'El Padrino',
@@ -189,7 +191,7 @@ window.APP_DATA = {
                         {
                             name: 'Scarface',
                             text: 'Biografía de un hombre que busca el poder y la fortuna en el mundo del crimen organizado.',
-                            puntaje: '⭐⭐⭐⭐'
+                            puntaje: '⭐⭐⭐⭐⭐'
                         },
                         {
                             name: 'Snatch',
@@ -197,15 +199,28 @@ window.APP_DATA = {
                             puntaje: '⭐⭐⭐'
                         }
                     ]
+                },
+
+                {
+                    type: 'flip',
+                    title: 'Discos favoritos',
+                    frontLabel: 'Disco',
+                    backLabel: 'Artista',
+                    pairs: [
+                        { front: 'Thriller', back: 'Michael Jackson' },
+                        { front: 'Otro día en el planeta tierra', back: 'Intoxicados' },
+                        { front: 'Mi vida sin tu amor', back: 'Cristian Castro' }
+                    ]
+                },
+
+                {
+                    type: 'extra',
+                    text: 'Me interesa particularmente el testing y el diseño, y aunque me cueste bastante este nuevo mundo, siempre estoy dispuesta a aprender cosas nuevas.'
                 }
-
-
-            ],
-
-            movies: ['Película 1', 'Película 2', 'Película 3'],
-            albums: ['Disco 1', 'Disco 2', 'Disco 3'],
-            extra: 'Aporta mirada técnica sobre interacciones simples, estados visibles y comportamiento consistente.'
+            ],       
         },
+
+        
         {
             id: '4',
             name: 'Guille',
