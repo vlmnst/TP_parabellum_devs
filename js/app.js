@@ -392,7 +392,8 @@
             focus: renderSectionFocus,
             extra: renderSectionExtra,
             list: (s) => renderListSection(s.title, s.items),
-            flip: renderSectionFlip
+            flip: renderSectionFlip,
+            favorites: renderSectionFavorites
         };
         const fn = renderers[section.type];
         return fn ? fn(section) : createElement('div', {});
@@ -483,6 +484,145 @@
                     ))
                 ])
     }   
+
+    function renderSectionFavorites(section) {
+        const categories = section.categories || [];
+
+        if (categories.length === 0) {
+            return createElement('section', { className: 'info-section' }, [
+                createElement('h3', { text: section.title || 'Favoritos' })
+            ]);
+        }
+
+        let activeCategoryIndex = 0;
+        let activeItemIndex = 0;
+        const tabButtons = [];
+        let itemButtons = [];
+
+        const badgeElement = createElement('span', { className: 'favorites-stage-badge', text: '' });
+        const titleElement = createElement('h4', { className: 'favorites-stage-title', text: '' });
+        const metaElement = createElement('p', { className: 'favorites-stage-meta', text: '' });
+        const noteElement = createElement('p', { className: 'favorites-stage-note', text: '' });
+        const counterElement = createElement('p', { className: 'favorites-stage-counter', text: '' });
+        const statusElement = createElement('p', { className: 'favorites-stage-status', text: '' });
+        const orbitLabelElement = createElement('span', { className: 'favorites-stage-orbit-label', text: '' });
+        const listElement = createElement('div', { className: 'favorites-tracklist' });
+
+        function setActiveItem(index) {
+            const category = categories[activeCategoryIndex];
+            const item = category.items[index];
+
+            if (!item) {
+                return;
+            }
+
+            activeItemIndex = index;
+            badgeElement.textContent = category.badge || category.label;
+            statusElement.textContent = category.stageLabel || category.label;
+            orbitLabelElement.textContent = category.visualLabel || category.label;
+            titleElement.textContent = item.name;
+            metaElement.textContent = item.meta || '';
+            noteElement.textContent = item.note || '';
+            counterElement.textContent = `${String(index + 1).padStart(2, '0')} / ${String(category.items.length).padStart(2, '0')}`;
+
+            itemButtons.forEach((button, buttonIndex) => {
+                const isActive = buttonIndex === index;
+                button.classList.toggle('is-active', isActive);
+                button.setAttribute('aria-pressed', String(isActive));
+            });
+        }
+
+        function buildItemButtons(categoryIndex) {
+            const category = categories[categoryIndex];
+
+            itemButtons = category.items.map((item, index) => {
+                const button = createElement('button', {
+                    className: 'favorites-track',
+                    type: 'button',
+                    ariaLabel: `Mostrar ${item.name}`
+                }, [
+                    createElement('span', {
+                        className: 'favorites-track-index',
+                        text: String(index + 1).padStart(2, '0')
+                    }),
+                    createElement('span', { className: 'favorites-track-copy' }, [
+                        createElement('strong', { className: 'favorites-track-name', text: item.name }),
+                        createElement('span', { className: 'favorites-track-meta', text: item.meta || '' })
+                    ])
+                ]);
+
+                button.addEventListener('click', () => setActiveItem(index));
+                button.addEventListener('mouseenter', () => setActiveItem(index));
+                button.addEventListener('focus', () => setActiveItem(index));
+
+                return button;
+            });
+
+            listElement.replaceChildren(...itemButtons);
+        }
+
+        function setActiveCategory(index) {
+            activeCategoryIndex = index;
+            activeItemIndex = 0;
+
+            tabButtons.forEach((button, buttonIndex) => {
+                const isActive = buttonIndex === index;
+                button.classList.toggle('is-active', isActive);
+                button.setAttribute('aria-pressed', String(isActive));
+            });
+
+            buildItemButtons(index);
+            setActiveItem(activeItemIndex);
+        }
+
+        const tabBar = createElement('div', { className: 'favorites-tabs' }, categories.map((category, index) => {
+            const button = createElement('button', {
+                className: `favorites-tab${index === 0 ? ' is-active' : ''}`,
+                type: 'button',
+                text: category.label
+            });
+
+            button.setAttribute('aria-pressed', String(index === 0));
+            button.addEventListener('click', () => setActiveCategory(index));
+            tabButtons.push(button);
+
+            return button;
+        }));
+
+        const stage = createElement('article', { className: 'favorites-stage' }, [
+            createElement('div', { className: 'favorites-stage-visual' }, [
+                createElement('span', { className: 'favorites-stage-orbit' }),
+                orbitLabelElement
+            ]),
+            createElement('div', { className: 'favorites-stage-copy' }, [
+                createElement('div', { className: 'favorites-stage-topline' }, [
+                    badgeElement,
+                    counterElement
+                ]),
+                statusElement,
+                titleElement,
+                metaElement,
+                noteElement
+            ])
+        ]);
+
+        const sectionElement = createElement('section', { className: 'info-section favorites-section' }, [
+            createElement('div', { className: 'favorites-heading' }, [
+                createElement('h3', { text: section.title }),
+                createElement('p', {
+                    className: 'section-copy',
+                    text: section.text || 'Una seleccion personal para salir un rato del codigo y volver con otra energia.'
+                })
+            ]),
+            tabBar,
+            stage,
+            listElement
+        ]);
+
+        setActiveCategory(0);
+
+        return sectionElement;
+    }
 
     function renderSectionExtra(section) {
         return createElement('div', { className: 'extra-info' }, [
