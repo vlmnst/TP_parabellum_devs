@@ -467,14 +467,17 @@
     function renderSectionFocus(section) {
         return createElement('section', { className: 'info-section' }, [
             createElement('h3', { text: section.title }),
-            createElement('div', { className: 'focus-grid' }, section.items.map((item) =>
-                createElement('article', { className: 'focus-card' }, [
-                    createElement('h4', { text: item.name }),
-                    createElement('p', { className: 'section-copy', text: item.text })
+                    createElement('div', { className: 'focus-grid' }, section.items.map((item) =>
+                        createElement('article', { className: 'focus-card' }, [
+                            createElement('h4', { text: item.name }),
+                            createElement('p', { className: 'section-copy', text: item.text }),
+                            createElement('p', {
+                                className: 'movie-stars', text: item.puntaje || ''
+                            })
+                        ])
+                    ))
                 ])
-            ))
-        ]);
-    }
+    }   
 
     function renderSectionExtra(section) {
         return createElement('div', { className: 'extra-info' }, [

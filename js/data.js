@@ -119,7 +119,7 @@ window.APP_DATA = {
             age: 36,
             photo: './img/anto_tortuga.png',
             accent: '#fb8f14',
-            heroCopy: 'Apasionada por la comunicación en todas sus formas. Busco adquirir nuevos conocimientos del mundo IT, siempre con una mirada social y humana.',
+            heroCopy: 'Apasionada por la comunicación en todas sus formas. Busco incorporar nuevos conocimientos del mundo IT, siempre con una mirada social y humana.',
             headline: '"Aprender no es prepararse para la vida. Aprender es la vida misma." — John Dewey.',
 
             links: [
@@ -138,7 +138,29 @@ window.APP_DATA = {
                 {
                     type: 'list',
                     title: 'Habilidades',
-                    items: ['Comunicación', 'Diseño visual', 'Testing manual', 'Desarrollo móvil' ]
+                    items: ['Comunicación', 'Diseño visual', 'Testing manual', 'Desarrollo móvil']
+                },
+
+                {
+                    type: 'focus',
+                    title: 'Películas',
+                    items: [
+                        {
+                            name: 'El Padrino',
+                            text: 'Clásico del cine sobre la poderosa familia mafiosa Corleone y la lucha por el poder, el honor y la lealtad.',
+                            puntaje: '⭐⭐⭐⭐⭐',
+                        },
+                        {
+                            name: 'Scarface',
+                            text: 'Biografía de un hombre que busca el poder y la fortuna en el mundo del crimen organizado.',
+                            puntaje: '⭐⭐⭐⭐'
+                        },
+                        {
+                            name: 'Snatch',
+                            text: 'Comedia oscura sobre un robo fallido y sus consecuencias.',
+                            puntaje: '⭐⭐⭐'
+                        }
+                    ]
                 }
 
 

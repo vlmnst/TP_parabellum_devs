@@ -39,11 +39,11 @@
     color: #fb8f14;
     font-weight: 500;
     transition:
-        transform 180ms ease,
-        background 180ms ease,
-        border-color 180ms ease,
-        box-shadow 180ms ease,
-        color 180ms ease;
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
 }
 
 .tag-list li:hover {
@@ -61,4 +61,50 @@
 
 .section-copy {
     text-align: justify;
+}
+
+.focus-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.focus-card {
+    display: grid;
+    gap: 0.8rem;
+    padding: 1rem;
+    border: 1px solid #fb8f14;
+    border-radius: var(--radius);
+    background: var(--color-paper);
+    transition: 0.25s ease;
+}
+
+.focus-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 24px rgba(251, 143, 20, 0.18);
+}
+
+.movie-stars {
+    margin-top: auto;
+    font-size: 1.1rem;
+}
+
+.focus-card h3 {
+    margin-bottom: 0.8rem;
+}
+
+.focus-card p {
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .stack-grid,
+    .focus-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stack-card-featured {
+        grid-column: auto;
+    }
 }
