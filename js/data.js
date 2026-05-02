@@ -149,12 +149,58 @@ window.APP_DATA = {
         },
         {
             id: '3',
-            name: 'Integrante 3',
-            location: 'Ciudad de residencia',
-            age: 20,
-            photo: '',
-            accent: '#476bb3',
-            skills: ['DOM', 'Eventos', 'Testing manual', 'Comunicación'],
+            name: 'Anto :)',
+            location: 'Córdobaaaaa capiiiiital',
+            age: 36,
+            photo: './img/anto_tortuga.png',
+            accent: '#fb8f14',
+            heroCopy: 'Apasionada por la comunicación en todas sus formas. Busco incorporar nuevos conocimientos del mundo IT, siempre con una mirada social y humana.',
+            headline: '"Aprender no es prepararse para la vida. Aprender es la vida misma." — John Dewey.',
+
+            links: [
+                { label: 'GitHub', href: 'https://github.com/Antocba' },
+                { label: 'LinkedIn', href: 'https://www.linkedin.com/in/antonellamasini' }
+
+            ],
+
+            sections: [
+                {
+                    type: 'intro',
+                    title: 'Un poco de mí',
+                    text: 'Hola! Soy Anto :) Lic. y Prof. en Comunicación Social, Téc. en RR.HH. y actualmente me encuentro en la búsqueda de odiar menos la programación, digo, de aprender cosas nuevas. Actualmente, trabajo como docente y preceptora, lo que me ha ayudado a llevar la paciencia al siguiente nivel. Me gusta el diseño visual y eso lo demuestro en mi emprendimiento "Cosa Nostra Personalizados". Si te gusta tomarte las cosas con humor y charlar un poco de todo, este es el lugar.'
+                },
+
+                {
+                    type: 'list',
+                    title: 'Habilidades',
+                    items: ['Comunicación', 'Diseño visual', 'Testing manual', 'Desarrollo móvil']
+                },
+
+                {
+                    type: 'focus',
+                    title: 'Películas',
+                    items: [
+                        {
+                            name: 'El Padrino',
+                            text: 'Clásico del cine sobre la poderosa familia mafiosa Corleone y la lucha por el poder, el honor y la lealtad.',
+                            puntaje: '⭐⭐⭐⭐⭐',
+                        },
+                        {
+                            name: 'Scarface',
+                            text: 'Biografía de un hombre que busca el poder y la fortuna en el mundo del crimen organizado.',
+                            puntaje: '⭐⭐⭐⭐'
+                        },
+                        {
+                            name: 'Snatch',
+                            text: 'Comedia oscura sobre un robo fallido y sus consecuencias.',
+                            puntaje: '⭐⭐⭐'
+                        }
+                    ]
+                }
+
+
+            ],
+
             movies: ['Película 1', 'Película 2', 'Película 3'],
             albums: ['Disco 1', 'Disco 2', 'Disco 3'],
             extra: 'Aporta mirada técnica sobre interacciones simples, estados visibles y comportamiento consistente.'
