@@ -17,7 +17,7 @@ window.APP_DATA = {
     members: [
         {
             id: '1',
-            name: 'Nico',
+            name: 'Cristian',
             location: 'Rio Hondo, Provincia de Santiago del Estero',
             age: 31,
             photo: '../img/foto_perfil_nico.jpg',
