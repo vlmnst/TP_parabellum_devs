@@ -144,6 +144,7 @@ window.APP_DATA = {
             photo: 'img/perfil_facu.png',
             photoClass: 'profile-photo-custom',
             accent: '#7b4fa3',
+            skills: ['Java', 'C#', 'Node.js','MySQL','Soporte IT'],
             heroCopy: 'Enfocado en la resolución técnica y el desarrollo de software. Actualmente cursando la tecnicatura y trabajando en infraestructura de sistemas para brindar soluciones eficientes y escalables.',
             headline: 'DEV & SOPORTE IT',
             links: [
