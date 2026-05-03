@@ -126,10 +126,14 @@ Sitio web grupal desarrollado como trabajo práctico de la materia Frontend en e
 ![Valeria perfil](img/readme-capturas/Valeria-perfil1.png)
 ![Valeria flip cards](img/readme-capturas/Valeria-FlipCard.png)
 
-**Anto** — Perfil y flip cards
+**Anto** — Perfil, list, focus y flip cards
 
-![Anto perfil](img/readme-capturas/Anto-perfil.png)
-![Anto flip cards](img/readme-capturas/Anto-flipCard.png)
+![Anto perfil](img/readme-capturas/capt1.png)
+![Anto perfil2](img/readme-capturas/capt2.png)
+![Anto list](img/readme-capturas/capt3.png)
+![Anto focus](img/readme-capturas/capt4.png)
+![Anto flip cards](img/readme-capturas/capt5.png)
+![Anto flip cards2](img/readme-capturas/capt6.png)
 
 **Guillermo** — Perfil y panel de favoritos animado
 
