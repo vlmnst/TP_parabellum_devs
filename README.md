@@ -14,7 +14,7 @@ Sitio web grupal desarrollado como trabajo práctico de la materia Frontend en e
 
 | Nombre completo   | GitHub                                             |
 | ----------------- | -------------------------------------------------- |
-| Nicolás (Nico)    | [@guinovi](https://github.com/NicoCris)            |
+| Nicolás (Nico)    | [@NicoCris](https://github.com/NicoCris)           |
 | Valeria Mansueto  | [@vlmnst](https://github.com/vlmnst)               |
 | Antonella Masini  | [@Antocba](https://github.com/Antocba)             |
 | Guillermo Novillo | [@guinovi](https://github.com/guinovi)             |
